@@ -2,14 +2,13 @@
 
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import Notifications from "./Notifications/page";
 
 export default function Home() {
   const { data: session } = useSession();
 
   console.log(session?.user);
   console.log(session?.expires);
-
-  
 
   if (!session) {
     return (
@@ -22,6 +21,7 @@ export default function Home() {
 
   return (
     <>
+      <Notifications />
       <h2>Welcome {session.user?.name}</h2>
       <p>Email: {session.user?.email}</p>
       <Image
