@@ -6,7 +6,6 @@ import { useMotionValue } from "framer-motion";
 import { LogoutAuth } from "@/features/queries/auth/LogoutAuth";
 import React, { useState } from "react";
 import { ModelConfirmation } from "../confirmationModel/AlertDialog";
-import { useFloatingAnimation } from "./useFloatingAnimation";
 
 export default function FloatingDockNavbar() {
   const mouseX = useMotionValue(Infinity);

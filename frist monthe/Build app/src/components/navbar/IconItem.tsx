@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  motion,
-  AnimatePresence,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "framer-motion";
+import { motion, AnimatePresence, MotionValue } from "framer-motion";
 import { useRef, useState } from "react";
 import { Spinner } from "@/components/ItemsWaiting/spinner";
 import { useFloatingAnimation } from "./useFloatingAnimation";
