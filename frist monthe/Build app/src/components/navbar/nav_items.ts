@@ -13,14 +13,14 @@ import {
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const navItems = [
-  { icon: Home, label: "Home", href: "#" },
-  { icon: Bell, label: "Notifications", href: "#" },
-  { icon: MessageCircleMore, label: "Message", href: "#" },
-  { icon: User, label: "Profile", href: "#" },
-  { icon: Settings, label: "Settings", href: "#" },
-  { icon: Heart, label: "Wishlist", href: "#" },
-  { icon: Trash, label: "Delete", href: "#" },
-  { icon: ShoppingCart, label: "Cart", href: "#" },
-  { icon: ThemeToggle, label: "Theme", href: "#" },
-  { icon: LogOut, label: "Logout", href: "#" },
+  { icon: Home, label: "Home", href: "/dashboard", type: "link" },
+  { icon: Bell, label: "Notifications", href: "/dashboard/Notifications", type: "link" },
+  { icon: MessageCircleMore, label: "Message", href: "/dashboard/Messages", type: "link" },
+  { icon: User, label: "Profile", href: "/dashboard/Profile", type: "link" },
+  { icon: Settings, label: "Settings", href: "/dashboard/Settings", type: "link" },
+  { icon: Heart, label: "Wishlist", href: "/dashboard/Wishlist", type: "link" },
+  { icon: Trash, label: "Delete", href: "/dashboard/Deleted", type: "link" },
+  { icon: ShoppingCart, label: "Cart", href: "/dashboard/Cart", type: "link" },
+  { icon: ThemeToggle, label: "Theme", href: "#", type: "action" },
+  { icon: LogOut, label: "Logout", href: "#", type: "action" },
 ];

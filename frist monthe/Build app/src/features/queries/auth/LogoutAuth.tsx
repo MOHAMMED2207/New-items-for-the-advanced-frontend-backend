@@ -21,6 +21,7 @@ export const LogoutAuth = () => {
         const data = await res.json();
         if (res.ok) {
           localStorage.removeItem("jwt"); // مسح التوكن من localStorage
+        
           router.push("/"); // إعادة توجيه المستخدم إلى صفحة تسجيل الدخول
         } else {
           console.error("Logout failed:", data.Message);
@@ -36,6 +37,8 @@ export const LogoutAuth = () => {
       queryClient.clear(); // تنظيف الـ cache
       router.push("/login"); // إعادة توجيه المستخدم إلى صفحة تسجيل الدخول
       toast.success("Logout successfully");
+                localStorage.removeItem("auth-storage"); // مسح التوكن من localStorage
+
     },
     onError: () => {
       toast.error("Logout failed");

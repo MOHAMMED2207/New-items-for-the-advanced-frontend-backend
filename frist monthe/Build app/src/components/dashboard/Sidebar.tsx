@@ -18,7 +18,7 @@ export const Sidebar = () => {
       label: "Roles",
       href: "/dashboard/roles",
       icon: ShieldCheck,
-      role: "admin",
+      role: "Admin",
     },
   ];
 
