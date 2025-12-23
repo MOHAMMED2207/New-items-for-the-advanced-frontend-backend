@@ -1,6 +1,6 @@
 "use client";
 
-import { ChartAreaInteractive } from "@/components/All_Charts_Analysis_Card/Charts";
+import { ChartAreaInteractive } from "@/components/AllCharts_AnalysisCard/Charts";
 import { DataTable } from "@/components/data-table/data-table";
 import { payments } from "@/data/DataTable/payments";
 import { Suspense } from "react";

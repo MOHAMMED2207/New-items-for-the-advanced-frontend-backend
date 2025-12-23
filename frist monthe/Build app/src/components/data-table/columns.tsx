@@ -39,6 +39,7 @@ export const columns: ColumnDef<Payment>[] = [
     header: ({ column }) => (
       <Button
         variant="ghost"
+        className="hover:bg-background hover:text-muted-foreground"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
         Email
@@ -76,7 +77,12 @@ export const columns: ColumnDef<Payment>[] = [
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost"
+            
+                    className="hover:bg-background hover:text-foreground"
+
+            
+            size="icon">
               <MoreHorizontal />
             </Button>
           </DropdownMenuTrigger>
