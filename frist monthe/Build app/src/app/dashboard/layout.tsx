@@ -1,20 +1,29 @@
 "use client";
 
-import { ReactNode } from "react";
-import { Sidebar } from "@/components/dashboard/Sidebar";
-import FloatingDockNavbar from "@/components/navbar/FloatingDockNavbar";
+import React, { ReactNode } from "react";
+import FloatingDockNavbar from "@/components/Top_Navbar/FloatingDockNavbar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/Left_Sidebar/app-sidebar";
+import { useAuthStore } from "@/State Managemet/store/authStore";
+import { User } from "@/types/formAuth";
+import LoadingPage from "@/components/ItemsWaiting/LodingPage";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
-  return (
-    <div className="flex h-screen w-full">
-      <Sidebar />
-      <FloatingDockNavbar />
+  const defaultOpen = true;
+  const { user } = useAuthStore() as { user: User };
 
-      <div className="flex flex-1 flex-col">
-        <main className="flex-1 overflow-y-auto bg-muted/40 p-6">
-          {children}
-        </main>
-      </div>
-    </div>
+  if (!user) {
+    return <LoadingPage />;
+  }
+  return (
+    <React.Fragment>
+      {/* // navbar  */}
+      {/* <FloatingDockNavbar /> */}
+      <SidebarProvider defaultOpen={defaultOpen}>
+        <AppSidebar />
+        <SidebarTrigger />
+        {children}
+      </SidebarProvider>
+    </React.Fragment>
   );
 }

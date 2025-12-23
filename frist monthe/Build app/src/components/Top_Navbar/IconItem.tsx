@@ -46,7 +46,7 @@ export function IconItem({
         borderRadius: smoothRadius,
       }}
       className={`${
-        isActive ? "bg-[#4d4d4d]" : "bg-[#1a1a1a]"
+        isActive ? "bg-[#af5b05]" : "bg-[#1a1a1a]"
       }   border border-[#2b2b2b] flex items-center justify-center relative cursor-pointer`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -71,7 +71,7 @@ export function IconItem({
           <Icon />
           {isActive && (
             <h1 className="w-full flex justify-center relative">
-              <p className="w-3 h-1 top-3 absolute bg-white rounded-full"></p>
+              <p className="w-3 h-1 top-3 absolute bg-orange-400 rounded-full"></p>
             </h1>
           )}
         </motion.div>
