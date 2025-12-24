@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <React.Fragment>
       {/* // navbar  */}
-      {/* <FloatingDockNavbar /> */}
+      <FloatingDockNavbar />
       <SidebarProvider defaultOpen={defaultOpen}>
         <AppSidebar />
         <SidebarTrigger />
